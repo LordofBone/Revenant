@@ -1,0 +1,4 @@
+.idea/
+stuff.txt
+__pycache__
+converted_model_fingers_cnn.tflite
