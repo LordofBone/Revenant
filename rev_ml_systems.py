@@ -1,7 +1,9 @@
 # !/user/bin/env python3
 
-# This is used for calling/configuring all ML systems on the Revenant
-# Thanks to https://www.kaggle.com/iomili/finger-counting-image-recognition-with-cnn for the code/dataset
+# This is used for calling/configuring all ML systems on the Revenant Thanks to
+# https://www.kaggle.com/iomili/finger-counting-image-recognition-with-cnn for the code/dataset You will also need to
+# grab the 'converted_model_fingers_cnn.tflite' file from here too and drop in the same folder in order for inference
+# to work
 
 import glob
 
