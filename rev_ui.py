@@ -4,7 +4,6 @@
 
 import qprompt
 
-import rev_ml_systems
 from rev_actions import ActionAccess
 from rev_console_logger import ConsoleAccess
 from rev_movements import MovementAccess
@@ -27,17 +26,15 @@ def mouth_mover():
 
 # Menu setup and display
 try:
-    menu.add("1", "Train Images (Takes forever on a Pi0)", rev_ml_systems.trainer)
-    menu.add("2", "Open Mouth", MovementAccess.open_mouth)
-    menu.add("3", "Close Mouth", MovementAccess.close_mouth)
-    menu.add("4", "Chatter Mouth", mouth_mover)
-    menu.add("5", "Take Picture", ActionAccess.snap_pic_and_show)
-    menu.add("6", "Analyse Fingers", rev_ml_systems.read_fingers)
-    menu.add("7", "Store Cam Pics Toggle", ActionAccess.toggle_store_detects)
-    menu.add("8", "Red Eye Toggle", MovementAccess.red_eye)
-    menu.add("9", "Blue Eye Toggle", MovementAccess.blue_eye)
-    menu.add("10", "Fire Rockets", MovementAccess.rocket_launch)
-    menu.add("11", "Toggle Console Printing", enable_logging)
+    menu.add("1", "Open Mouth", MovementAccess.open_mouth)
+    menu.add("2", "Close Mouth", MovementAccess.close_mouth)
+    menu.add("3", "Chatter Mouth", mouth_mover)
+    menu.add("4", "Take Picture", ActionAccess.snap_pic_and_show)
+    menu.add("5", "Store Cam Pics Toggle", ActionAccess.toggle_store_detects)
+    menu.add("6", "Red Eye Toggle", MovementAccess.red_eye)
+    menu.add("7", "Blue Eye Toggle", MovementAccess.blue_eye)
+    menu.add("8", "Fire Rockets", MovementAccess.rocket_launch)
+    menu.add("9", "Toggle Console Printing", enable_logging)
     menu.main(loop=True)
 except KeyboardInterrupt:
     exit()
